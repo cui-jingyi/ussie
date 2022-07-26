@@ -20,8 +20,16 @@ library(dplyr)
 ```
 
 ussie let's you work with European soccer data from the engsoccerdata package by making standard tibbles for each country.
-
+## Match country data
+The function uss_make_matches() can standardize data from a specified country.
 ```{r}
 uss_make_matches(engsoccerdata::spain, "Spain")
+```
+
+## Get country data
+The function uss_get_matches() can get the matches for a country specified.
+```{r}
+italy_data <- uss_get_matches("Italy")
+italy_data %>% glimpse()
 ```
 
